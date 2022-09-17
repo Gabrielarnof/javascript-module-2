@@ -17,11 +17,16 @@ console.log(siteHeader);
     3. the element with id "jumbotron-text"
     --> should log the "#jumbotron-text" node
 */
+
+const jumbotronText = document.querySelector("#jumbotron-text");
+console.log(jumbotronText);
 /*
     4. all the "p" elements of contained inside  the .primary-content element node
     --> should log a list of nodes with a length of 3
 */
 
+const pPrimaryContent = document.querySelectorAll(".primary-content p");
+console.log(pPrimaryContent);
 
 
 /*
