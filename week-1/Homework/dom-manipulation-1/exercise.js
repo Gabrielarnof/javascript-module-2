@@ -119,4 +119,14 @@ Using the same function in Task 3, every time the 'Change colour' button is clic
 The next color when you are in the last color of the array will be the first color again.
 */
 
-
+const colors = ["#00FF00", "#E9967A", " #ff99c2", "#ddff99", "#ffff99"];
+const backGroundColor = document.querySelector("body");
+let i = 0;
+changeBgColor.addEventListener("click", () => {
+    backGroundColor.style.backgroundColor = colors[i]
+    if (i < colors.length - 1) {
+        i++;
+    } else {
+        i = 0;
+    }
+})
