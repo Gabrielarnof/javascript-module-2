@@ -32,3 +32,57 @@ greenBtn.addEventListener("click", () => {
     donateBikeBtn.style.backgroundColor = "#000";
     volunteerBtn.style.backgroundColor = "#8c9c08";
 })
+
+// Task 2
+
+let form = document.querySelector("form");
+form.addEventListener("submit", checkUserInput);
+
+let emailArea = document.querySelector("#exampleInputEmail1");
+let nameArea = document.querySelector("#example-text-input");
+let textArea = document.querySelector("#exampleTextarea");
+
+emailArea.addEventListener("change", changeBackground);
+nameArea.addEventListener("change", changeBackground);
+textArea.addEventListener("change", changeBackground);
+
+function changeBackground(event) {
+    event.target.classList.remove("redBackground");
+    event.target.classList.add("whiteBackground");
+}
+function checkUserInput(event) {
+    event.preventDefault();
+    let isEmailAreaValid = emailArea.value.trim().includes("@");
+    let isNameAreaValid = nameArea.value.trim().length > 0;
+    let isTextAreaValid = textArea.value.trim().length > 0;
+
+    if (isEmailAreaValid && isNameAreaValid && isTextAreaValid) {
+
+        emailArea.value = "";
+        nameArea.value = "";
+        textArea.value = "";
+
+        emailArea.classList.remove("redBackground");
+        emailArea.classList.add("whiteBackground");
+        nameArea.classList.remove("redBackground");
+        nameArea.classList.add("whiteBackground");
+        textArea.classList.remove("redBackground");
+        textArea.classList.add("whiteBackground");
+
+        alert("Thank you for filling out the form");
+    } else {
+
+        if (!isEmailAreaValid) {
+            emailArea.classList.remove("whiteBackground");
+            emailArea.classList.add("redBackground");
+        }
+        if (!isNameAreaValid) {
+            nameArea.classList.remove("whiteBackground");
+            nameArea.classList.add("redBackground");
+        }
+        if (!isTextAreaValid) {
+            textArea.classList.remove("whiteBackground");
+            textArea.classList.add("redBackground");
+        }
+    }
+}
