@@ -5,8 +5,8 @@ Write JavaScript below that logs:
     1. all the "p" element nodes of the document,
     --> should log a list of nodes with a length of 6
 */
-const pEl = document.querySelectorAll("p");
-console.log(pEl);
+const pElements = document.querySelectorAll("p");
+console.log(pElements);
 /*
     2. the first div element node
     --> should log the ".site-header" node
@@ -34,16 +34,25 @@ Task 2
 ======
 
 When a user clicks the 'ALERT' button, an alert box should pop up with the text "Thanks for visiting Bikes for Refugees!"
-*/
 
+*/
+const alertBtn = document.querySelector("#alertBtn");
+alertBtn.addEventListener("click", () => {
+    alert("Thanks for visiting Bikes for Refugees!");
+})
 
 /*
+
 Task 3
 =======
 
 Write JavaScript below that changes the background colour of the page when the 'Change colour' button is clicked.
 */
+const changeBgColor = document.querySelector("#bgrChangeBtn");
+changeBgColor.addEventListener("click", () => {
+    document.body.style.backgroundColor = "#87CEFA";
 
+})
 
 /*
 Task 4
@@ -51,7 +60,15 @@ Task 4
 
 When a user clicks the ‘Add some text’ button, a new paragraph should be added inside the section that says “LEARN MORE”
 */
+let addSomeText = document.querySelector("#addTextBtn");
 
+addSomeText.addEventListener("click", addNewParagraph);
+function addNewParagraph() {
+    let newP = document.createElement("p");
+    let text = document.querySelector("#mainArticles");
+    text.appendChild(newP);
+    newP.innerText = "Hello PatataS"
+}
 
 
 /*
