@@ -17,3 +17,44 @@ var car = {
 
 */
 
+var TV = {
+    brand: "Samsung",
+    model: "SmartTV",
+    color: "black",
+    screen: "75¨ "
+}
+
+var Moto = {
+    brand: "Harley",
+    color: "black",
+    motor: "998cc"
+}
+
+var laptop = {
+    brand: "Lenovo",
+    model: "IdeaPad S540",
+    operatingSystem: "Windows 10",
+    screenSize: 17,
+    isTouchscreen: true,
+}
+
+var cellphone = {
+    brand: "Samsung",
+    model: "Galaxy A13",
+    screenSize: 6.6,
+    camera: "quad camera system",
+    isTouchscreen: true
+}
+
+var car = {
+    brand: "Ferrari",
+    model: "Ferrari 812 GTS",
+    color: "black",
+    horsepower: 800,
+    doors: 2
+}
+console.log(TV);
+console.log(Moto);
+console.log(laptop);
+console.log(cellphone);
+console.log(car);
