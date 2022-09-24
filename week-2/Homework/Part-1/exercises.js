@@ -14,9 +14,14 @@
  * </div>
  */
 function exerciseOne(arrayOfPeople) {
-  let content = document.querySelector("#content");
-}
 
+  let content = document.querySelector("#content");
+
+  arrayOfPeople.forEach(person => {
+    content.appendChild(document.createElement("h1")).textContent = person["name"];
+    content.appendChild(document.createElement("h2")).textContent = person["job"];
+  })
+}
 /**
  *
  * Create a list of shopping items. You should use an unordered list.
@@ -25,8 +30,20 @@ function exerciseOne(arrayOfPeople) {
  *
  */
 function exerciseTwo(shopping) {
+
+
+
   //Write your code in here
 }
+function exerciseTwo(shopping) {
+  //Write your code in here
+  let ulEl = document.createElement("ul");
+  content.appendChild(ulEl);
+  shopping.forEach(item => {
+    ulEl.appendChild(document.createElement("li")).textContent = item;
+  })
+}
+
 
 /**
     I'd like to display my three favorite books inside a nice webpage!
@@ -60,7 +77,33 @@ function exerciseTwo(shopping) {
 function exerciseThree(books) {
   //Write your code in here
 }
+function exerciseThree(books) {
+  let content = document.querySelector("#content");
+  let ulEl1 = document.createElement("ul");
+  content.appendChild(ulEl1);
+  ulEl1.className += "toFlex"
 
+  books.forEach((book, index) => {
+
+    let liEl1 = document.createElement("li");
+    ulEl1.appendChild(liEl1);
+
+    let pEl = document.createElement("p");
+    liEl1.appendChild(pEl);
+    pEl.textContent = book.title + " - " + book.author;
+    pEl.className = "toPadding"
+
+    let imgEl = document.createElement("img");
+    imgEl.src = "./img" + (index + 1) + ".jpg";
+    liEl1.appendChild(imgEl);
+    imgEl.className = "toPadding"
+    if (book.alreadyRead === true) {
+      liEl1.className += "bookRead"
+    } else {
+      liEl1.className += "bookUnRead"
+    }
+  })
+}
 //
 //
 //
