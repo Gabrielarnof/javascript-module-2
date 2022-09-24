@@ -37,6 +37,7 @@ function exerciseTwo(shopping) {
 }
 function exerciseTwo(shopping) {
   //Write your code in here
+  let content = document.querySelector("#content");
   let ulEl = document.createElement("ul");
   content.appendChild(ulEl);
   shopping.forEach(item => {
@@ -74,9 +75,9 @@ function exerciseTwo(shopping) {
 
     The end result should look something like this: https://hyf-js2-week1-makeme-ex1-demo.herokuapp.com/
 **/
-function exerciseThree(books) {
-  //Write your code in here
-}
+
+//Write your code in here
+
 function exerciseThree(books) {
   let content = document.querySelector("#content");
   let ulEl1 = document.createElement("ul");
@@ -104,9 +105,7 @@ function exerciseThree(books) {
     }
   })
 }
-//
-//
-//
+
 //
 // DO NOT EDIT BELOW HERE
 //
@@ -130,12 +129,12 @@ const books = [
   {
     title: "The Design of Everyday Things",
     author: "Don Norman",
-    alreadyRead: false
+    alreadyRead: true
   },
   {
     title: "The Most Human Human",
     author: "Brian Christian",
-    alreadyRead: true
+    alreadyRead: false
   },
   {
     title: "The Pragmatic Programmer",
