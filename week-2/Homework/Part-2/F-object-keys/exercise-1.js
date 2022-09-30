@@ -22,8 +22,8 @@ let highScores = {
 
 let capitalCitiesKeys = Object.keys(capitalCities);
 let highScoresKeys = Object.keys(highScores);
-let capitalCitiesValues = Object.keys(capitalCities);
-let highScoresValues = Object.keys(highScores);
+let capitalCitiesValues = Object.values(capitalCities);
+let highScoresValues = Object.values(highScores);
 
 // ONLY EDIT ABOVE HERE
 
