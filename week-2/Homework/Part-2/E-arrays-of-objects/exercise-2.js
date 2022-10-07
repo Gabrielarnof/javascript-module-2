@@ -41,19 +41,20 @@ WRITE YOUR CODE BELOW
 
 
 let destinationNamesWithin500Kms = travelDestinations
-    .filter(destination => destination.distanceKms <= 500)
-    .map(destination => destination.destinationName)
+.filter(destination => destination.distanceKms <= 500)
+.map(destination => destination.destinationName) 
+
 
 let destinationNameReachableByFerry = travelDestinations
-    .filter(destination => destination.transportations.includes("ferry"))
-    .map(destination => destination.destinationName);
+.filter(destination => destination.transportations.includes("ferry"))
+.map(destination => destination.destinationName); 
 
 function distinationWithIn300KmsByTrain(destination) {
     return destination.distanceKms > 300 && destination.transportations.includes("train");
 }
 let destinationNamesMoreThan300KmsAwayByTrain = travelDestinations
-    .filter(destination => destination.distanceKms > 300 && destination.transportations.includes("train"))
-    .map(destination => destination.destinationName)
+.filter(destination => destination.distanceKms > 300 && destination.transportations.includes("train"))
+.map(destination => destination.destinationName)
 
 /*
 DO NOT EDIT ANYTHING BELOW THIS LINE

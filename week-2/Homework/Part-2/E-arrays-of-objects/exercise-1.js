@@ -23,27 +23,19 @@ let person3 = {
 DO NOT EDIT ANYTHING ABOVE THIS LINE
 WRITE YOUR CODE BELOW
 */
-
-
-let persons = [person1, person2, person3]
+let persons = [person1, person2, person3];
 
 function personWithNames(person) {
     return person.name;
 }
-
 let personNames = persons.map(personWithNames);
 
 function personsYoungerThan28(person1) {
     return person1.age < 28;
 }
-function personsYoungerThan28(person2) {
-    return person2.age < 28;
-}
-function personsYoungerThan28(person3) {
-    return person.age < 28;
-}
 
 let personsYoungerThan28YearsOld = persons.filter(personsYoungerThan28);
+
 
 /*
 DO NOT EDIT ANYTHING BELOW THIS LINE
