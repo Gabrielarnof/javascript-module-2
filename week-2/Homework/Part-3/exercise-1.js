@@ -37,22 +37,20 @@ function getOwnerFullName(house) {
   return `${house.currentOwner.firstName} ${house.currentOwner.lastName}`
 }
 
+
 // returns an array of the owners' email addresses of the two houses
 function getEmailAddresses(house1, house2) {
   return [house1.currentOwner.email, house2.currentOwner.email]
 }
 
-
-
 // returns the address for the cheapest house out of the two
 function getCheapestAddress(house1, house2) {
-  if (house1.price < house2.price) {
+  if(house1.price < house2.price){
     return house1.address;
   } else {
     return house2.address;
   }
 }
-
 
 /*
 
@@ -72,7 +70,7 @@ console.log(
 );
 console.log(
   `Expected result: 1 Kinning Park. Actual result: ${getCheapestAddress(
-    parkAvenueHouse,
+    parkAvenueHouse, 
     kinningParkHouse
   )}`
 );

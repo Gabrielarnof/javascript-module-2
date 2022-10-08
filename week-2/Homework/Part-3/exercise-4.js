@@ -55,27 +55,36 @@ WRITE YOUR CODE BELOW
 */
 
 let restaurantFinderApplication = {
-  applicationName: "Restaurant Finder",
-  applicationVersion: "1.0",
-  restaurants: restaurants,
-  findAvailableRestaurants: function (numberOfPeople) {
-    return this.restaurants
-      .filter((restaurant)).filter((restaurant) => {
+    applicationName: "Restaurant Finder",
+    applicationVersion: "1.0",
+    restaurants: restaurants,
+    findAvailableRestaurants: function (numberOfPeople) {
+      return this.restaurants
+      .filter((restaurant) => {
         const availableSeats = restaurant.totalSeats - restaurant.numberOfCustomers
         return availableSeats >= numberOfPeople
       }).map(restaurant => restaurant.name)
+      
+    },
 
-  },
+    /**2) Define a method findRestaurantServingDish which takes a dish name in parameter and returns
+all the restaurant names serving this dish. */
 
-},
-  findRestaurantServingDish: function (dishName) {
-    // Complete here
-  },
-  countNumberOfRestaurantsInArea: function (area) {
-    // Complete here
-  },
+    findRestaurantServingDish: function (dishName) {
+      return this.restaurants
+      .filter(restaurant => restaurant.menu.includes(dishName))
+      .map(restaurant => restaurant.name)
+    },
+
+    /**3) Define a method countNumberOfRestaurantsInArea which takes an area of Glasgow in parameter (center, west),
+and returns the number of restaurants in this area. */
+
+    countNumberOfRestaurantsInArea: function (area) {
+      return this.restaurants
+      .filter((restaurant) => 
+        restaurant.address.area === area).length
+    },
   };
-
 /*
 DO NOT EDIT ANYTHING BELOW THIS LINE
 */
