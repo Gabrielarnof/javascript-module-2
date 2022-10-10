@@ -9,3 +9,16 @@ Task 2
 Update your code to make the colour change every 5 seconds to something different. Hint: try searching for setInterval. (https://www.w3schools.com/jsref/met_win_setinterval.asp)
 ================
 */
+const colors = ["blue", "#0ee64b", " #4287f5", "#ddff99", "#e68b15"]; 
+const backGroundColor = document.querySelector("body");
+let i = 0;
+
+function changeBgColor() {
+    backGroundColor.style.backgroundColor = colors[i]
+    if(i < colors.length - 1) {
+        i++;
+    } else {
+        i = 0;
+    }
+}
+setInterval(changeBgColor, 5000);
